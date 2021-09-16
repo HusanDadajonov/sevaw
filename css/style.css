@@ -18,6 +18,9 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.btn-des:hover{
+  opacity: 0.7;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -76,10 +79,10 @@ a{
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
+  border: 1px solid #f5443b;
   background: #F5443B;
   border-radius: 6px;
   padding: 12px 32px;
-  border: none;
   margin-left: 63px;
 }
 button:hover{
@@ -98,8 +101,8 @@ button:hover{
   padding: 20px 20px 20px 56px;
   width: 400px;
   position: relative;
-  left: 27%;
-  top: -32px
+  left: 19%;
+  top: -113px;
 }
 .more-than{
   position: absolute;
@@ -132,15 +135,11 @@ button:hover{
   right: 88px;
 }
 
-.girl-img{
-  width: 913px;
-  height: auto;
-  position: absolute;
-  top: 114px;
-}
+
 .hero-contents-box{
   justify-content: flex-end;
 }
+
 .title{
   font-style: normal;
   font-weight: 600;
@@ -156,11 +155,67 @@ button:hover{
   border-radius: 8px;
   padding: 6px 16px;
   position:absolute;
+  color: #fff;
   bottom: 10px;
   left: 7%;
+  z-index: 2;
 }
 .relative-img{
   position: relative;
+}
+.relative-img img{
+  opacity: 0.5;
+  z-index: 10;
+}
+.fulled-container{
+  padding: 0;
+}
+.girl-img-box{
+  height: 800px;
+  background-image: url("../img/girl.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 111px;
+  position: relative;
+}
+.girl-img-box img{
+  position:absolute;
+  transform: translateY(0);
+}
+.animation-img1{
+  left: 12%;
+  top: 30%;
+  animation-name: anim1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes anim1{
+  0%{
+    transform: translateY(-150px);
+  }
+  50%{
+    transform: translateY(-0);
+  }
+  100%{
+    transform: translateY(-150px);
+  }
+}@keyframes anim2{
+  0%{
+    transform: translateY(-150px);
+  }
+  50%{
+    transform: translateY(-0);
+  }
+  100%{
+    transform: translateY(-150px);
+  }
+}
+.animation-img2{
+  left: 67%;
+  top: 21%;
+  animation-name: anim2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 .text{
   font-style: normal;
@@ -221,6 +276,27 @@ button:hover{
   border-radius: 8px;
   padding: 8px 18px;
   margin-bottom: 24px;
+}
+.design-button-box{
+  width: 500px;
+}
+.design-button:nth-child(1){
+  width: 130px;
+}
+.design-button:nth-child(2){
+  width: 157px;
+}
+.design-button:nth-child(3){
+  width: 184px;
+}
+.design-button:nth-child(4){
+  width: 186px;
+}
+.design-button:nth-child(5){
+  width: 123px;
+}
+.design-button:nth-child(6){
+  width: 117x;
 }
 .mentors{
   padding: 103px 0;
@@ -334,9 +410,19 @@ button:hover{
 .computers-box:hover{
   height: 485px;
 }
-.computers-box:hover .btn-acces{
+.computers-box:hover .btn{
   transition-delay: 0.2s;
   opacity: 1;
+}
+.btn{
+  transition: all 0.4s ease;
+}
+.btn:hover{
+  background-color: transparent;
+  color: #F5443B;
+}
+.btn:active{
+  opacity: 0.5;
 }
 .computers-box img{
   display: block;
@@ -374,6 +460,7 @@ button:hover{
   color: rgba(255, 255, 255, 0.4);
 }
 .btn-acces{
+  border: 1px solid #f5443b;
   background: #F5443B;
   border-radius: 6px;
   font-style: normal;
@@ -384,7 +471,7 @@ button:hover{
   padding: 12px 32px;
   display: block;
   margin: 0 auto;
-  width: 155px;
+  width: 159px;
   margin-top: 28px;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -394,7 +481,8 @@ button:hover{
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  color: #F5443B;
+  color: #fff;
+  background-color:#F5443B ;
   border: 1px solid #F5443B;
   border-radius: 6px;
   padding: 16px 32px;
@@ -403,6 +491,7 @@ button:hover{
   width: 200px;
   margin-top: 50px;
 }
+
 .live-online{
   padding: 109px 0 161px 0;
   position: relative;
@@ -573,21 +662,15 @@ button:hover{
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  color: #F5443B;
-  opacity: 0.5;
+  color: #fff;
+  opacity: 1;
   border: 1px solid #F5443B;
+  background-color:#F5443B;
   border-radius: 6px;
   padding: 16px 32px;
   display: block;
   text-align: center;
   transition: opacity 0.4s ease;
-}
-.current-btn:hover{
-  opacity: 1;
-}
-.current-btn:active{
-  background: #F5443B;
-  color: #fff;
 }
 .pricing-main-box{
   display: grid;
@@ -656,10 +739,15 @@ button:hover{
   font-size: 20px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.7);
-  opacity: 0.6
+  opacity: 0.6;
+  transition: all 0.4s ease;
 }
 .footer-bar{
   margin-bottom: 24px;
+}
+.footer-bar:hover a{
+  color: #fff;
+  opacity: 1;
 }
 .bar1 p,
 .bar2 p,
@@ -670,4 +758,15 @@ button:hover{
   font-size: 20px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.8);
+}
+.copyright{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #8F91D0;
+  text-align: center;
+  margin: 0;
+  margin-top: 86px;
+  margin-bottom: 30px;
 }
